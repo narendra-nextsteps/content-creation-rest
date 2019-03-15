@@ -1,0 +1,99 @@
+syntax = "proto2";
+
+package database;
+
+message Resource {
+    enum Types {
+        TEXT = 0;
+        PDF = 1;
+        IMAGE = 3;
+        WEB_LINK = 4;
+        vIDEO = 5;
+    }
+    optional string id = 1;
+    optional string name = 2;
+    optional Types type = 3;
+    optional string text = 4;
+    optional string link = 5; // Except Text evrything will be s3 bucket link
+    optional bool is_done = 12; // done editing or not
+    optional string tags = 13;
+}
+
+message IdAndName {
+    optional string id = 1;
+    optional string name = 2;
+}
+
+message Question {
+    enum Types {
+        MCQ_SINGLE_CHOICE = 0;
+        TRUE_OR_FALSE = 1;
+        FILL_THE_BLANK = 2;
+        FREE_RESPONSE = 3;
+        MCQ_MULTIPLE_CHOICES = 4;
+        MATCHING = 5;
+        DRAG_AND_DROP = 6;
+    }
+
+    optional string id = 1;
+    optional string name = 2;
+    optional Types type = 3;
+    repeated IdAndName topics = 4;
+    repeated IdAndName assessments = 5;
+    optional Mcq data = 6;
+    optional int32 answer = 7; // 0,1,2,3 - index of the answer in options
+    optional string created_by = 8;
+    optional string time_created = 9;
+    optional string time_modified = 10;
+    optional string time_archived = 11;
+    optional bool is_done = 12; // done editing or not
+    optional string tags = 13;
+}
+
+message Mcq {
+    optional string question_html = 1;
+    repeated string options_html = 2;
+}
+
+message Assessment {
+    optional string id = 1;
+    optional string name = 2;
+    optional string instructions = 3;
+    repeated IdAndName themes = 4;
+    repeated string question_ids = 5;
+    optional string created_by = 8;
+    optional string time_created = 9;
+    optional string time_modified = 10;
+    optional string time_archived = 11;
+    optional bool is_done = 12; // done editing or not
+    optional string tags = 13;
+}
+
+message Topic {
+    optional string id = 1;
+    optional string name = 2;
+    optional string description = 3;
+    repeated IdAndName themes = 4;
+    repeated string questions = 5;
+    optional string created_by = 8;
+    optional string time_created = 9;
+    optional string time_modified = 10;
+    optional string time_archived = 11;
+    optional bool is_done = 12; // done editing or not
+    optional string tags = 13;
+}
+
+message Theme {
+    optional string id = 1;
+    optional string name = 2;
+    optional string description = 3;
+    repeated IdAndName topics = 4;
+    repeated IdAndName assessments = 5;
+    optional string _key = 6; // same as id
+    optional string created_by = 8;
+    optional string time_created = 9;
+    optional string time_modified = 10;
+    optional string time_archived = 11;
+    optional bool is_done = 12; // done editing or not
+    optional string tags = 13;
+}

@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+package response;
+
+import "content_creation_db/protos/database.proto";
+
+message Acknowledgement {
+    optional bool is_successful_execution = 1;
+    repeated string execution_error_messages = 2;
+}
+
+message Login {
+    optional bool is_successful_execution = 1;
+    repeated string execution_error_messages = 2;
+}
+
+message UserContentResponse {
+    repeated database.Theme themes = 1;
+    repeated database.Topic topics = 2;
+    repeated database.Assessment assessments = 3;
+}
+
+//Get
+message AllContentResponse {
+    repeated database.Theme themes = 1;
+    repeated database.Topic topics = 2;
+    repeated database.Assessment assessments = 3;
+}

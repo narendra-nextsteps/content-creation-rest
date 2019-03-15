@@ -1,0 +1,69 @@
+syntax = "proto2";
+
+package request;
+
+import "content_creation_db/protos/database.proto";
+
+message Login {
+    optional string user_id = 1;
+    optional string password = 2;
+}
+
+message SignUp {
+    optional string user_id = 1;
+    optional string name = 2;
+    optional string email = 3;
+    optional string password = 4;
+}
+
+message LandingPage {
+    optional string user_id = 1;
+}
+
+message UserContentRequest {
+    optional string user_id = 1;
+}
+
+message CreateQuestionRequest {
+    optional database.Question question = 1;
+}
+
+message ArchiveQuestionRequest {
+
+}
+
+message CreateResourceRequest {
+    optional database.Resource resource = 1;
+}
+
+message CreateAssessmentRequest {
+    optional database.Assessment assessment = 1;
+}
+
+message CreateTopicRequest {
+    optional database.Topic topic = 1;
+}
+
+message CreateThemeRequest {
+    optional database.Theme theme = 1;
+}
+
+message GetTheme {
+    optional string id = 1;
+}
+
+message GetTopics {
+    repeated string ids = 1;
+}
+
+message GetAssessments {
+    repeated string ids = 1;
+}
+
+message GetQuestions {
+    repeated string ids = 1;
+}
+
+message GetResource {
+    repeated string ids = 1;
+}
