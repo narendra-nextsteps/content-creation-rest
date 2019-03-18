@@ -1,27 +1,28 @@
 from content_creation_db.db import db_nomenclature, db_objects
 
 
-def update_theme_query(theme_data):
+def get_theme_query(theme_id):
     """Query to create a theme.
 
     Parameters
     ----------
-    theme_data : object
+    theme_id : object
 
     """
     return """
-        REPLACE "{key}" WITH {theme} IN {theme_collection}
-        RETURN {{"is_successfult_execution": true}}
+        LET theme = (
+            RETURN DOCUMENT("{theme_collection}", "{theme_id}")
+        )
+        RETURN {{"is_successfult_execution": true, theme: theme[0]}}
         """.format(
-            key=theme_data["_key"],
-            theme=theme_data,
+            theme_id=theme_id,
             theme_collection=db_nomenclature.THEME_COLLECTION
         )
 
 
-def update_theme_query_response(theme_data):
+def get_theme_query_response(theme_id):
     query_response = db_objects.graph_db().AQLQuery(
-        update_theme_query(theme_data)
+        get_theme_query(theme_id)
     ).response
     if query_response['error'] or not query_response['result']:
         return {"is successful execution": False}

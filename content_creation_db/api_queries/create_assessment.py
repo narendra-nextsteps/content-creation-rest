@@ -10,12 +10,15 @@ def create_assessment_query(assessment_data):
 
     """
     return """
-        INSERT {assessment} IN {assessments_collection}
-        RETURN {{"is_successfult_execution": true}}
+        LET assessment = {assessment}
+        INSERT assessment IN {assessments_collection}
+        RETURN {{
+            "is_successfull_execution": true, assessment_id: assessment.id
+        }}
         """.format(
-            assessment=assessment_data,
-            assessments_collection=db_nomenclature.ASSESSMENT_COLLECTION
-        )
+        assessment=assessment_data,
+        assessments_collection=db_nomenclature.ASSESSMENT_COLLECTION
+    )
 
 
 def create_assessment_query_response(assessment_data):

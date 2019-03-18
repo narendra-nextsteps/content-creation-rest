@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content_creation_db/protos/database.proto',
   package='database',
   syntax='proto2',
-  serialized_pb=_b('\n)content_creation_db/protos/database.proto\x12\x08\x64\x61tabase\"\xc7\x01\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12&\n\x04type\x18\x03 \x01(\x0e\x32\x18.database.Resource.Types\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x0c\n\x04link\x18\x05 \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\">\n\x05Types\x12\x08\n\x04TEXT\x10\x00\x12\x07\n\x03PDF\x10\x01\x12\t\n\x05IMAGE\x10\x03\x12\x0c\n\x08WEB_LINK\x10\x04\x12\t\n\x05vIDEO\x10\x05\"%\n\tIdAndName\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xd5\x03\n\x08Question\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12&\n\x04type\x18\x03 \x01(\x0e\x32\x18.database.Question.Types\x12#\n\x06topics\x18\x04 \x03(\x0b\x32\x13.database.IdAndName\x12(\n\x0b\x61ssessments\x18\x05 \x03(\x0b\x32\x13.database.IdAndName\x12\x1b\n\x04\x64\x61ta\x18\x06 \x01(\x0b\x32\r.database.Mcq\x12\x0e\n\x06\x61nswer\x18\x07 \x01(\x05\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\x93\x01\n\x05Types\x12\x15\n\x11MCQ_SINGLE_CHOICE\x10\x00\x12\x11\n\rTRUE_OR_FALSE\x10\x01\x12\x12\n\x0e\x46ILL_THE_BLANK\x10\x02\x12\x11\n\rFREE_RESPONSE\x10\x03\x12\x18\n\x14MCQ_MULTIPLE_CHOICES\x10\x04\x12\x0c\n\x08MATCHING\x10\x05\x12\x11\n\rDRAG_AND_DROP\x10\x06\"2\n\x03Mcq\x12\x15\n\rquestion_html\x18\x01 \x01(\t\x12\x14\n\x0coptions_html\x18\x02 \x03(\t\"\xee\x01\n\nAssessment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x14\n\x0cinstructions\x18\x03 \x01(\t\x12#\n\x06themes\x18\x04 \x03(\x0b\x32\x13.database.IdAndName\x12\x14\n\x0cquestion_ids\x18\x05 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xe5\x01\n\x05Topic\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12#\n\x06themes\x18\x04 \x03(\x0b\x32\x13.database.IdAndName\x12\x11\n\tquestions\x18\x05 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\x8a\x02\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12#\n\x06topics\x18\x04 \x03(\x0b\x32\x13.database.IdAndName\x12(\n\x0b\x61ssessments\x18\x05 \x03(\x0b\x32\x13.database.IdAndName\x12\x0c\n\x04_key\x18\x06 \x01(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t')
+  serialized_pb=_b('\n)content_creation_db/protos/database.proto\x12\x08\x64\x61tabase\"\xc7\x01\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12&\n\x04type\x18\x03 \x01(\x0e\x32\x18.database.Resource.Types\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x0c\n\x04link\x18\x05 \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\">\n\x05Types\x12\x08\n\x04TEXT\x10\x00\x12\x07\n\x03PDF\x10\x01\x12\t\n\x05IMAGE\x10\x03\x12\x0c\n\x08WEB_LINK\x10\x04\x12\t\n\x05vIDEO\x10\x05\"%\n\tIdAndName\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xd5\x03\n\x08Question\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12&\n\x04type\x18\x03 \x01(\x0e\x32\x18.database.Question.Types\x12#\n\x06topics\x18\x04 \x03(\x0b\x32\x13.database.IdAndName\x12(\n\x0b\x61ssessments\x18\x05 \x03(\x0b\x32\x13.database.IdAndName\x12\x1b\n\x04\x64\x61ta\x18\x06 \x01(\x0b\x32\r.database.Mcq\x12\x0e\n\x06\x61nswer\x18\x07 \x01(\x05\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\x93\x01\n\x05Types\x12\x15\n\x11MCQ_SINGLE_CHOICE\x10\x00\x12\x11\n\rTRUE_OR_FALSE\x10\x01\x12\x12\n\x0e\x46ILL_THE_BLANK\x10\x02\x12\x11\n\rFREE_RESPONSE\x10\x03\x12\x18\n\x14MCQ_MULTIPLE_CHOICES\x10\x04\x12\x0c\n\x08MATCHING\x10\x05\x12\x11\n\rDRAG_AND_DROP\x10\x06\"2\n\x03Mcq\x12\x15\n\rquestion_html\x18\x01 \x01(\t\x12\x14\n\x0coptions_html\x18\x02 \x03(\t\"\xe7\x01\n\nAssessment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x0cinstructions\x18\x04 \x01(\t\x12\x0e\n\x06themes\x18\x05 \x03(\t\x12\x14\n\x0cquestion_ids\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xde\x01\n\x05Topic\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0e\n\x06themes\x18\x05 \x03(\t\x12\x11\n\tquestions\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xe0\x01\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0e\n\x06topics\x18\x05 \x03(\t\x12\x13\n\x0b\x61ssessments\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -383,70 +383,77 @@ _ASSESSMENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='database.Assessment.name', index=1,
+      name='_key', full_name='database.Assessment._key', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='instructions', full_name='database.Assessment.instructions', index=2,
+      name='name', full_name='database.Assessment.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='themes', full_name='database.Assessment.themes', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='instructions', full_name='database.Assessment.instructions', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='question_ids', full_name='database.Assessment.question_ids', index=4,
+      name='themes', full_name='database.Assessment.themes', index=4,
       number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='created_by', full_name='database.Assessment.created_by', index=5,
+      name='question_ids', full_name='database.Assessment.question_ids', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='created_by', full_name='database.Assessment.created_by', index=6,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_created', full_name='database.Assessment.time_created', index=6,
+      name='time_created', full_name='database.Assessment.time_created', index=7,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_modified', full_name='database.Assessment.time_modified', index=7,
+      name='time_modified', full_name='database.Assessment.time_modified', index=8,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_archived', full_name='database.Assessment.time_archived', index=8,
+      name='time_archived', full_name='database.Assessment.time_archived', index=9,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_done', full_name='database.Assessment.is_done', index=9,
+      name='is_done', full_name='database.Assessment.is_done', index=10,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='database.Assessment.tags', index=10,
+      name='tags', full_name='database.Assessment.tags', index=11,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -465,7 +472,7 @@ _ASSESSMENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=821,
-  serialized_end=1059,
+  serialized_end=1052,
 )
 
 
@@ -484,70 +491,77 @@ _TOPIC = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='database.Topic.name', index=1,
+      name='_key', full_name='database.Topic._key', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='description', full_name='database.Topic.description', index=2,
+      name='name', full_name='database.Topic.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='themes', full_name='database.Topic.themes', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='description', full_name='database.Topic.description', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='questions', full_name='database.Topic.questions', index=4,
+      name='themes', full_name='database.Topic.themes', index=4,
       number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='created_by', full_name='database.Topic.created_by', index=5,
+      name='questions', full_name='database.Topic.questions', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='created_by', full_name='database.Topic.created_by', index=6,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_created', full_name='database.Topic.time_created', index=6,
+      name='time_created', full_name='database.Topic.time_created', index=7,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_modified', full_name='database.Topic.time_modified', index=7,
+      name='time_modified', full_name='database.Topic.time_modified', index=8,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='time_archived', full_name='database.Topic.time_archived', index=8,
+      name='time_archived', full_name='database.Topic.time_archived', index=9,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_done', full_name='database.Topic.is_done', index=9,
+      name='is_done', full_name='database.Topic.is_done', index=10,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='database.Topic.tags', index=10,
+      name='tags', full_name='database.Topic.tags', index=11,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -565,8 +579,8 @@ _TOPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1062,
-  serialized_end=1291,
+  serialized_start=1055,
+  serialized_end=1277,
 )
 
 
@@ -585,37 +599,37 @@ _THEME = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='database.Theme.name', index=1,
+      name='_key', full_name='database.Theme._key', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='description', full_name='database.Theme.description', index=2,
+      name='name', full_name='database.Theme.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='topics', full_name='database.Theme.topics', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='assessments', full_name='database.Theme.assessments', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='_key', full_name='database.Theme._key', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='description', full_name='database.Theme.description', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='topics', full_name='database.Theme.topics', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assessments', full_name='database.Theme.assessments', index=5,
+      number=6, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -673,8 +687,8 @@ _THEME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1294,
-  serialized_end=1560,
+  serialized_start=1280,
+  serialized_end=1504,
 )
 
 _RESOURCE.fields_by_name['type'].enum_type = _RESOURCE_TYPES
@@ -684,10 +698,6 @@ _QUESTION.fields_by_name['topics'].message_type = _IDANDNAME
 _QUESTION.fields_by_name['assessments'].message_type = _IDANDNAME
 _QUESTION.fields_by_name['data'].message_type = _MCQ
 _QUESTION_TYPES.containing_type = _QUESTION
-_ASSESSMENT.fields_by_name['themes'].message_type = _IDANDNAME
-_TOPIC.fields_by_name['themes'].message_type = _IDANDNAME
-_THEME.fields_by_name['topics'].message_type = _IDANDNAME
-_THEME.fields_by_name['assessments'].message_type = _IDANDNAME
 DESCRIPTOR.message_types_by_name['Resource'] = _RESOURCE
 DESCRIPTOR.message_types_by_name['IdAndName'] = _IDANDNAME
 DESCRIPTOR.message_types_by_name['Question'] = _QUESTION

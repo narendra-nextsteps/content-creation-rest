@@ -57,10 +57,11 @@ message Mcq {
 
 message Assessment {
     optional string id = 1;
-    optional string name = 2;
-    optional string instructions = 3;
-    repeated IdAndName themes = 4;
-    repeated string question_ids = 5;
+    optional string _key = 2; // same as id
+    optional string name = 3;
+    optional string instructions = 4;
+    repeated string themes = 5;
+    repeated string question_ids = 6;
     optional string created_by = 8;
     optional string time_created = 9;
     optional string time_modified = 10;
@@ -71,10 +72,11 @@ message Assessment {
 
 message Topic {
     optional string id = 1;
-    optional string name = 2;
-    optional string description = 3;
-    repeated IdAndName themes = 4;
-    repeated string questions = 5;
+    optional string _key = 2; // same as id
+    optional string name = 3;
+    optional string description = 4;
+    repeated string themes = 5;
+    repeated string questions = 6;
     optional string created_by = 8;
     optional string time_created = 9;
     optional string time_modified = 10;
@@ -85,11 +87,11 @@ message Topic {
 
 message Theme {
     optional string id = 1;
-    optional string name = 2;
-    optional string description = 3;
-    repeated IdAndName topics = 4;
-    repeated IdAndName assessments = 5;
-    optional string _key = 6; // same as id
+    optional string _key = 2; // same as id
+    optional string name = 3;
+    optional string description = 4;
+    repeated string topics = 5;
+    repeated string assessments = 6;
     optional string created_by = 8;
     optional string time_created = 9;
     optional string time_modified = 10;

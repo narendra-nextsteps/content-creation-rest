@@ -10,8 +10,9 @@ def create_theme_query(theme_data):
 
     """
     return """
-        INSERT {theme} IN {theme_collection}
-        RETURN {{"is_successfult_execution": true}}
+        LET theme = {theme}
+        INSERT theme IN {theme_collection}
+        RETURN {{"is_successfull_execution": true, theme_id: theme.id}}
         """.format(
             theme=theme_data,
             theme_collection=db_nomenclature.THEME_COLLECTION

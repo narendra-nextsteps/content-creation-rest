@@ -1,27 +1,27 @@
 from content_creation_db.db import db_nomenclature, db_objects
 
 
-def update_theme_query(theme_data):
-    """Query to create a theme.
+def update_assessment_query(assessment_data):
+    """Query to create a assessment.
 
     Parameters
     ----------
-    theme_data : object
+    assessment_data : object
 
     """
     return """
-        REPLACE "{key}" WITH {theme} IN {theme_collection}
+        REPLACE "{key}" WITH {assessment} IN {assessment_collection}
         RETURN {{"is_successfult_execution": true}}
         """.format(
-            key=theme_data["_key"],
-            theme=theme_data,
-            theme_collection=db_nomenclature.THEME_COLLECTION
+            key=assessment_data["_key"],
+            assessment=assessment_data,
+            assessment_collection=db_nomenclature.ASSESSMENT_COLLECTION
         )
 
 
-def update_theme_query_response(theme_data):
+def update_assessment_query_response(assessment_data):
     query_response = db_objects.graph_db().AQLQuery(
-        update_theme_query(theme_data)
+        update_assessment_query(assessment_data)
     ).response
     if query_response['error'] or not query_response['result']:
         return {"is successful execution": False}
