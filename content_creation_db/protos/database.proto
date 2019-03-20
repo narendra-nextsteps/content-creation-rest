@@ -11,10 +11,13 @@ message Resource {
         vIDEO = 5;
     }
     optional string id = 1;
-    optional string name = 2;
-    optional Types type = 3;
-    optional string text = 4;
-    optional string link = 5; // Except Text evrything will be s3 bucket link
+    optional string _key = 2; // same as id
+    optional string name = 3;
+    optional Types type = 4;
+    optional string text = 5;
+    optional string link = 6; // Except Text evrything will be s3 bucket link
+    repeated string topic_ids = 7;
+    repeated string assessment_ids = 8;
     optional bool is_done = 12; // done editing or not
     optional string tags = 13;
 }
@@ -36,18 +39,19 @@ message Question {
     }
 
     optional string id = 1;
-    optional string name = 2;
-    optional Types type = 3;
-    repeated IdAndName topics = 4;
-    repeated IdAndName assessments = 5;
-    optional Mcq data = 6;
-    optional int32 answer = 7; // 0,1,2,3 - index of the answer in options
-    optional string created_by = 8;
-    optional string time_created = 9;
-    optional string time_modified = 10;
-    optional string time_archived = 11;
-    optional bool is_done = 12; // done editing or not
-    optional string tags = 13;
+    optional string _key = 2; // same as id
+    optional string name = 3;
+    optional Types type = 4;
+    repeated string topic_ids = 5;
+    repeated string assessment_ids = 6;
+    optional Mcq data = 7;
+    optional int32 answer = 8; // 0,1,2,3 - index of the answer in options
+    optional string created_by = 9;
+    optional string time_created = 10;
+    optional string time_modified = 11;
+    optional string time_archived = 12;
+    optional bool is_done = 13; // done editing or not
+    optional string tags = 14;
 }
 
 message Mcq {
@@ -60,7 +64,7 @@ message Assessment {
     optional string _key = 2; // same as id
     optional string name = 3;
     optional string instructions = 4;
-    repeated string themes = 5;
+    repeated string theme_ids = 5;
     repeated string question_ids = 6;
     optional string created_by = 8;
     optional string time_created = 9;
@@ -75,8 +79,9 @@ message Topic {
     optional string _key = 2; // same as id
     optional string name = 3;
     optional string description = 4;
-    repeated string themes = 5;
-    repeated string questions = 6;
+    repeated string theme_ids = 5;
+    repeated string question_ids = 6;
+    repeated string resource_ids = 7;
     optional string created_by = 8;
     optional string time_created = 9;
     optional string time_modified = 10;
@@ -90,8 +95,8 @@ message Theme {
     optional string _key = 2; // same as id
     optional string name = 3;
     optional string description = 4;
-    repeated string topics = 5;
-    repeated string assessments = 6;
+    repeated string topic_ids = 5;
+    repeated string assessment_ids = 6;
     optional string created_by = 8;
     optional string time_created = 9;
     optional string time_modified = 10;

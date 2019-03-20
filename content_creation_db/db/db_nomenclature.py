@@ -2,14 +2,14 @@
 
 DATABASE = "content_creation"
 
-USER_COLLECTION = "users"
+USER_COLLECTION = "Users"
 
-THEME_COLLECTION = 'themes'
+THEME_COLLECTION = 'Themes'
 
-TOPIC_COLLECTION = 'topics'
+TOPIC_COLLECTION = 'Topics'
 
-ASSESSMENT_COLLECTION = 'assessments'
+ASSESSMENT_COLLECTION = 'Assessments'
 
-QUESTION_COLLECTION = 'questions'
+QUESTION_COLLECTION = 'Questions'
 
-RESOURCE_COLLECTION = 'resources'
+RESOURCE_COLLECTION = 'Resources'
