@@ -22,9 +22,6 @@ def create_assessment_query(assessment_data):
 
 
 def create_assessment_query_response(assessment_data):
-    print("==============================")
-    print(assessment_data)
-    print("==============================")
     query_response = db_objects.graph_db().AQLQuery(
         create_assessment_query(assessment_data)
     ).response

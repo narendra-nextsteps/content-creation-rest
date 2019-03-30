@@ -42,7 +42,7 @@ class Theme(Resource):
             )
 
     def put(self, theme_id):
-        "Update theme."""
+        """Update theme."""
         msg_request, err_msg = flask_request_response.message_request(
             request_pb2.CreateThemeRequest, THEME_API, PUT_REQUEST
         )

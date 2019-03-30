@@ -19,6 +19,9 @@ def json_request(api_name, request_type, encoding='utf-8'):
     """
     try:
         request_text = _request.data
+        print(" ")
+        print(type(request_text))
+        print(" ")
         json_object = _json.loads(request_text.decode(encoding))
         app.logger.info(
             "Request for '%s/%s': %s",
@@ -26,7 +29,7 @@ def json_request(api_name, request_type, encoding='utf-8'):
         )
     except Exception:
         app.logger.error(
-            "Unable to parse the given text: %s in %s/%s",
+            "Unable to parse the given text: %s in %s/%s ",
             request_text, api_name, request_type
         )
         return None

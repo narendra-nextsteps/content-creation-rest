@@ -2,6 +2,18 @@ syntax = "proto2";
 
 package database;
 
+message User {
+    enum Role {
+        INSTRUCTOR = 0;
+        STUDENT = 1;
+    }
+    optional string user_id = 1;
+    optional string name = 2;
+    optional string email = 3;
+    optional string password = 4;
+    optional Role role = 5;
+}
+
 message Resource {
     enum Types {
         TEXT = 0;

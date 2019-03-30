@@ -13,11 +13,27 @@ def get_theme_query(theme_id):
         LET theme = (
             RETURN DOCUMENT("{theme_collection}", "{theme_id}")
         )
-        RETURN {{"is_successfult_execution": true, theme: theme[0]}}
-        """.format(
-            theme_id=theme_id,
-            theme_collection=db_nomenclature.THEME_COLLECTION
+        LET assessmentsDetails = (
+            FILTER theme[0].assessment_ids
+            FOR assessmentId in theme[0].assessment_ids
+                FOR assessment in Assessments
+                    FILTER assessment.id == assessmentId
+                return assessment
         )
+
+        LET topicDetails = (
+            FILTER theme[0].topic_ids
+            FOR topicId in theme[0].topic_ids
+                FOR topic in Topics
+                    FILTER topic.id == topicId
+                return topic
+        )
+        RETURN {{"is_successfult_execution": true, theme: theme[0],
+            assessmentsDetails: assessmentsDetails, topicDetails: topicDetails}}
+        """.format(
+        theme_id=theme_id,
+        theme_collection=db_nomenclature.THEME_COLLECTION
+    )
 
 
 def get_theme_query_response(theme_id):

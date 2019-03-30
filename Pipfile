@@ -20,8 +20,7 @@ python-dotenv = "*"
 
 [scripts]
 server = "flask run"
-init_db = "python -m content_creation_db.db.main"
-gen_proto = "protoc --python_out='.' content_creation_db/protos/*.proto"
+init_db = ""
 
 [requires]
 python_version = "3.6"

@@ -19,11 +19,33 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content_creation_db/protos/database.proto',
   package='database',
   syntax='proto2',
-  serialized_pb=_b('\n)content_creation_db/protos/database.proto\x12\x08\x64\x61tabase\"\x80\x02\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12&\n\x04type\x18\x04 \x01(\x0e\x32\x18.database.Resource.Types\x12\x0c\n\x04text\x18\x05 \x01(\t\x12\x0c\n\x04link\x18\x06 \x01(\t\x12\x11\n\ttopic_ids\x18\x07 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x08 \x03(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\">\n\x05Types\x12\x08\n\x04TEXT\x10\x00\x12\x07\n\x03PDF\x10\x01\x12\t\n\x05IMAGE\x10\x03\x12\x0c\n\x08WEB_LINK\x10\x04\x12\t\n\x05vIDEO\x10\x05\"%\n\tIdAndName\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xbf\x03\n\x08Question\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12&\n\x04type\x18\x04 \x01(\x0e\x32\x18.database.Question.Types\x12\x11\n\ttopic_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x06 \x03(\t\x12\x1b\n\x04\x64\x61ta\x18\x07 \x01(\x0b\x32\r.database.Mcq\x12\x0e\n\x06\x61nswer\x18\x08 \x01(\x05\x12\x12\n\ncreated_by\x18\t \x01(\t\x12\x14\n\x0ctime_created\x18\n \x01(\t\x12\x15\n\rtime_modified\x18\x0b \x01(\t\x12\x15\n\rtime_archived\x18\x0c \x01(\t\x12\x0f\n\x07is_done\x18\r \x01(\x08\x12\x0c\n\x04tags\x18\x0e \x01(\t\"\x93\x01\n\x05Types\x12\x15\n\x11MCQ_SINGLE_CHOICE\x10\x00\x12\x11\n\rTRUE_OR_FALSE\x10\x01\x12\x12\n\x0e\x46ILL_THE_BLANK\x10\x02\x12\x11\n\rFREE_RESPONSE\x10\x03\x12\x18\n\x14MCQ_MULTIPLE_CHOICES\x10\x04\x12\x0c\n\x08MATCHING\x10\x05\x12\x11\n\rDRAG_AND_DROP\x10\x06\"2\n\x03Mcq\x12\x15\n\rquestion_html\x18\x01 \x01(\t\x12\x14\n\x0coptions_html\x18\x02 \x03(\t\"\xea\x01\n\nAssessment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x0cinstructions\x18\x04 \x01(\t\x12\x11\n\ttheme_ids\x18\x05 \x03(\t\x12\x14\n\x0cquestion_ids\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xfa\x01\n\x05Topic\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x11\n\ttheme_ids\x18\x05 \x03(\t\x12\x14\n\x0cquestion_ids\x18\x06 \x03(\t\x12\x14\n\x0cresource_ids\x18\x07 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xe6\x01\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x11\n\ttopic_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t')
+  serialized_pb=_b('\n)content_creation_db/protos/database.proto\x12\x08\x64\x61tabase\"\x8e\x01\n\x04User\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12\x10\n\x08password\x18\x04 \x01(\t\x12!\n\x04role\x18\x05 \x01(\x0e\x32\x13.database.User.Role\"#\n\x04Role\x12\x0e\n\nINSTRUCTOR\x10\x00\x12\x0b\n\x07STUDENT\x10\x01\"\x80\x02\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12&\n\x04type\x18\x04 \x01(\x0e\x32\x18.database.Resource.Types\x12\x0c\n\x04text\x18\x05 \x01(\t\x12\x0c\n\x04link\x18\x06 \x01(\t\x12\x11\n\ttopic_ids\x18\x07 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x08 \x03(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\">\n\x05Types\x12\x08\n\x04TEXT\x10\x00\x12\x07\n\x03PDF\x10\x01\x12\t\n\x05IMAGE\x10\x03\x12\x0c\n\x08WEB_LINK\x10\x04\x12\t\n\x05vIDEO\x10\x05\"%\n\tIdAndName\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xbf\x03\n\x08Question\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12&\n\x04type\x18\x04 \x01(\x0e\x32\x18.database.Question.Types\x12\x11\n\ttopic_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x06 \x03(\t\x12\x1b\n\x04\x64\x61ta\x18\x07 \x01(\x0b\x32\r.database.Mcq\x12\x0e\n\x06\x61nswer\x18\x08 \x01(\x05\x12\x12\n\ncreated_by\x18\t \x01(\t\x12\x14\n\x0ctime_created\x18\n \x01(\t\x12\x15\n\rtime_modified\x18\x0b \x01(\t\x12\x15\n\rtime_archived\x18\x0c \x01(\t\x12\x0f\n\x07is_done\x18\r \x01(\x08\x12\x0c\n\x04tags\x18\x0e \x01(\t\"\x93\x01\n\x05Types\x12\x15\n\x11MCQ_SINGLE_CHOICE\x10\x00\x12\x11\n\rTRUE_OR_FALSE\x10\x01\x12\x12\n\x0e\x46ILL_THE_BLANK\x10\x02\x12\x11\n\rFREE_RESPONSE\x10\x03\x12\x18\n\x14MCQ_MULTIPLE_CHOICES\x10\x04\x12\x0c\n\x08MATCHING\x10\x05\x12\x11\n\rDRAG_AND_DROP\x10\x06\"2\n\x03Mcq\x12\x15\n\rquestion_html\x18\x01 \x01(\t\x12\x14\n\x0coptions_html\x18\x02 \x03(\t\"\xea\x01\n\nAssessment\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x0cinstructions\x18\x04 \x01(\t\x12\x11\n\ttheme_ids\x18\x05 \x03(\t\x12\x14\n\x0cquestion_ids\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xfa\x01\n\x05Topic\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x11\n\ttheme_ids\x18\x05 \x03(\t\x12\x14\n\x0cquestion_ids\x18\x06 \x03(\t\x12\x14\n\x0cresource_ids\x18\x07 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t\"\xe6\x01\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04_key\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x11\n\ttopic_ids\x18\x05 \x03(\t\x12\x16\n\x0e\x61ssessment_ids\x18\x06 \x03(\t\x12\x12\n\ncreated_by\x18\x08 \x01(\t\x12\x14\n\x0ctime_created\x18\t \x01(\t\x12\x15\n\rtime_modified\x18\n \x01(\t\x12\x15\n\rtime_archived\x18\x0b \x01(\t\x12\x0f\n\x07is_done\x18\x0c \x01(\x08\x12\x0c\n\x04tags\x18\r \x01(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
+
+_USER_ROLE = _descriptor.EnumDescriptor(
+  name='Role',
+  full_name='database.User.Role',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='INSTRUCTOR', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='STUDENT', index=1, number=1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=163,
+  serialized_end=198,
+)
+_sym_db.RegisterEnumDescriptor(_USER_ROLE)
 
 _RESOURCE_TYPES = _descriptor.EnumDescriptor(
   name='Types',
@@ -54,8 +76,8 @@ _RESOURCE_TYPES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=250,
-  serialized_end=312,
+  serialized_start=395,
+  serialized_end=457,
 )
 _sym_db.RegisterEnumDescriptor(_RESOURCE_TYPES)
 
@@ -96,10 +118,70 @@ _QUESTION_TYPES = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=654,
-  serialized_end=801,
+  serialized_start=799,
+  serialized_end=946,
 )
 _sym_db.RegisterEnumDescriptor(_QUESTION_TYPES)
+
+
+_USER = _descriptor.Descriptor(
+  name='User',
+  full_name='database.User',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='database.User.user_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='database.User.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='email', full_name='database.User.email', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='password', full_name='database.User.password', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='role', full_name='database.User.role', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _USER_ROLE,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=56,
+  serialized_end=198,
+)
 
 
 _RESOURCE = _descriptor.Descriptor(
@@ -192,8 +274,8 @@ _RESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56,
-  serialized_end=312,
+  serialized_start=201,
+  serialized_end=457,
 )
 
 
@@ -230,8 +312,8 @@ _IDANDNAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=314,
-  serialized_end=351,
+  serialized_start=459,
+  serialized_end=496,
 )
 
 
@@ -353,8 +435,8 @@ _QUESTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=354,
-  serialized_end=801,
+  serialized_start=499,
+  serialized_end=946,
 )
 
 
@@ -391,8 +473,8 @@ _MCQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=803,
-  serialized_end=853,
+  serialized_start=948,
+  serialized_end=998,
 )
 
 
@@ -499,8 +581,8 @@ _ASSESSMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=1090,
+  serialized_start=1001,
+  serialized_end=1235,
 )
 
 
@@ -614,8 +696,8 @@ _TOPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1093,
-  serialized_end=1343,
+  serialized_start=1238,
+  serialized_end=1488,
 )
 
 
@@ -722,15 +804,18 @@ _THEME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1346,
-  serialized_end=1576,
+  serialized_start=1491,
+  serialized_end=1721,
 )
 
+_USER.fields_by_name['role'].enum_type = _USER_ROLE
+_USER_ROLE.containing_type = _USER
 _RESOURCE.fields_by_name['type'].enum_type = _RESOURCE_TYPES
 _RESOURCE_TYPES.containing_type = _RESOURCE
 _QUESTION.fields_by_name['type'].enum_type = _QUESTION_TYPES
 _QUESTION.fields_by_name['data'].message_type = _MCQ
 _QUESTION_TYPES.containing_type = _QUESTION
+DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.message_types_by_name['Resource'] = _RESOURCE
 DESCRIPTOR.message_types_by_name['IdAndName'] = _IDANDNAME
 DESCRIPTOR.message_types_by_name['Question'] = _QUESTION
@@ -738,6 +823,13 @@ DESCRIPTOR.message_types_by_name['Mcq'] = _MCQ
 DESCRIPTOR.message_types_by_name['Assessment'] = _ASSESSMENT
 DESCRIPTOR.message_types_by_name['Topic'] = _TOPIC
 DESCRIPTOR.message_types_by_name['Theme'] = _THEME
+
+User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
+  DESCRIPTOR = _USER,
+  __module__ = 'content_creation_db.protos.database_pb2'
+  # @@protoc_insertion_point(class_scope:database.User)
+  ))
+_sym_db.RegisterMessage(User)
 
 Resource = _reflection.GeneratedProtocolMessageType('Resource', (_message.Message,), dict(
   DESCRIPTOR = _RESOURCE,

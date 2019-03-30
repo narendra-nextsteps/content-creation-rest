@@ -10,10 +10,7 @@ message Login {
 }
 
 message SignUp {
-    optional string user_id = 1;
-    optional string name = 2;
-    optional string email = 3;
-    optional string password = 4;
+    optional database.User signup_details = 1;
 }
 
 message LandingPage {
